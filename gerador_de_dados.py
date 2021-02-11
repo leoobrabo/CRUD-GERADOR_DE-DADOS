@@ -4,7 +4,7 @@ from ultilidades import apresentar_programa, vermelho, verde, azul, amarelo, sep
 
 lista_nomes = ['Leonardo', 'Rita', 'Heraclito', 'Luciene', 'Eric']
 
-lista_emails = ['leonardomotta2010@hotmail.com', 'leomotta2777@gmail.com',
+lista_emails = ['leonardomotta2020@hotmail.com', 'leomotta2000@gmail.com',
                 'teste@gmail.com', 'usuario@gmail.com', 'teste@hotmail.com']
 
 lista_telefones = ['99999-0000', '98888-0000',
@@ -44,10 +44,11 @@ def menu():
         verde('3 - Para gerar telefones')
         verde('4 - Para gerar cidades')
         verde('5 - Para gerar estados')
+        verde('6 - Voltar')
         aleatorio = escolha_aleatoria()
         escolha = input('Digite a Opção Desejada: ')
 
-        if escolha == 'parar':
+        if escolha == '6':
             amarelo('Finalizando Programa')
             break
 
@@ -59,40 +60,51 @@ def menu():
             if i == '1':
                 nome = lista_nomes[aleatorio]
                 if salvar == 's':
-                    print(nome)
+                    verde(nome)
+                    separar_por_linha()
                     salvar_arquivo(nome)
                 else:
-                    print(nome)
+                    azul(nome)
+                    separar_por_linha()
             elif i == '2':
                 email = lista_emails[aleatorio]
                 if salvar == 's':
-                    print(email)
+                    verde(email)
+                    separar_por_linha()
                     salvar_arquivo(email)
                 else:
-                    print(email)
+                    azul(email)
+                    separar_por_linha()
             elif i == '3':
                 telefone = lista_telefones[aleatorio]
                 if salvar == 's':
-                    print(telefone)
+                    verde(telefone)
+                    separar_por_linha()
                     salvar_arquivo(telefone)
                 else:
-                    print(telefone)
+                    azul(telefone)
+                    separar_por_linha()
             elif i == '4':
                 cidade = lista_cidades[aleatorio]
                 if salvar == 's':
-                    print(cidade)
+                    verde(cidade)
+                    separar_por_linha()
                     salvar_arquivo(cidade)
                 else:
-                    print(cidade)
+                    azul(cidade)
+                    separar_por_linha()
             elif i == '5':
                 estado = lista_estados[aleatorio]
                 if salvar == 's':
-                    print(estado)
+                    verde(estado)
+                    separar_por_linha()
                     salvar_arquivo(estado)
                 else:
-                    print(estado)
+                    azul(estado)
+                    separar_por_linha()
             else:
                 vermelho('Opção Invalida')
+                separar_por_linha()
 
 
 def apresentar_menu():
@@ -100,8 +112,8 @@ def apresentar_menu():
     verde('1 - Ultilizar o Gerador de dados')
     amarelo('2 - Editar dados existente')
     vermelho('3 - Excluir um dado')
-    verde('4 - Criar dado')
-    verde('5 - Sair')
+    amarelo('4 - Criar dado')
+    vermelho('5 - Sair')
     opcao = input('Digite uma opção: ')
     separar_por_linha()
     return opcao
