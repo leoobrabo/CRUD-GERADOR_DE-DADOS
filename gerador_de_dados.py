@@ -49,7 +49,7 @@ def menu():
         escolha = input('Digite a Opção Desejada: ')
 
         if escolha == '6':
-            amarelo('Finalizando Programa')
+            amarelo('Abrindo Tela Inicial')
             break
 
         escolhas = escolha.split(',')
