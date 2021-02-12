@@ -17,7 +17,7 @@ lista_estados = ['DF', 'SP', 'RJ', 'MG', 'GO']
 
 
 def salvar_arquivo(dados):
-    with open('dados_de_teste.txt', 'a', encoding='utf-8') as arquivo:
+    with open('dados.txt', 'a', encoding='utf-8') as arquivo:
         conteudo = f'{dados}\n'
         arquivo.writelines(conteudo)
 
@@ -35,16 +35,18 @@ def aviso_de_licenca():
 
 
 def menu():
-    print('Ultilize uma ou mais opções para gerar dados aleatorios')
 
     while True:
+        verde('Ultilize uma ou mais opções para gerar dados aleatorios')
         separar_por_linha()
+        print('')
         verde('1 - Para gerar Nomes')
         verde('2 - Para gerar emails')
         verde('3 - Para gerar telefones')
         verde('4 - Para gerar cidades')
         verde('5 - Para gerar estados')
         verde('6 - Voltar')
+        print('')
         aleatorio = escolha_aleatoria()
         escolha = input('Digite a Opção Desejada: ')
 
@@ -54,57 +56,60 @@ def menu():
 
         escolhas = escolha.split(',')
 
-        salvar = input('Deseja salvar as opções (s/n)')
+        salvar = input('Deseja salvar as opções (s/n) ')
+        separar_por_linha()
 
         for i in escolhas:
             if i == '1':
                 nome = lista_nomes[aleatorio]
                 if salvar == 's':
                     verde(nome)
-                    separar_por_linha()
+
                     salvar_arquivo(nome)
                 else:
                     azul(nome)
-                    separar_por_linha()
+
             elif i == '2':
                 email = lista_emails[aleatorio]
                 if salvar == 's':
                     verde(email)
-                    separar_por_linha()
+
                     salvar_arquivo(email)
                 else:
                     azul(email)
-                    separar_por_linha()
+
             elif i == '3':
                 telefone = lista_telefones[aleatorio]
                 if salvar == 's':
                     verde(telefone)
-                    separar_por_linha()
+
                     salvar_arquivo(telefone)
                 else:
                     azul(telefone)
-                    separar_por_linha()
+
             elif i == '4':
                 cidade = lista_cidades[aleatorio]
                 if salvar == 's':
                     verde(cidade)
-                    separar_por_linha()
+
                     salvar_arquivo(cidade)
                 else:
                     azul(cidade)
-                    separar_por_linha()
+
             elif i == '5':
                 estado = lista_estados[aleatorio]
                 if salvar == 's':
                     verde(estado)
-                    separar_por_linha()
+
                     salvar_arquivo(estado)
                 else:
                     azul(estado)
-                    separar_por_linha()
+
             else:
                 vermelho('Opção Invalida')
                 separar_por_linha()
+
+            separar_por_linha()
 
 
 def apresentar_menu():
