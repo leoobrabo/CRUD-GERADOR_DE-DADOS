@@ -37,15 +37,16 @@ def aviso_de_licenca():
 def menu():
 
     while True:
-        verde('Ultilize uma ou mais opções para gerar dados aleatorios')
+        verde(
+            'Ultilize uma ou mais opções separadas por virgula para gerar dados aleatorios')
         separar_por_linha()
         print('')
-        verde('1 - Para gerar Nomes')
-        verde('2 - Para gerar emails')
-        verde('3 - Para gerar telefones')
-        verde('4 - Para gerar cidades')
-        verde('5 - Para gerar estados')
-        verde('6 - Voltar')
+        verde('[1] - Para gerar Nomes')
+        verde('[2] - Para gerar emails')
+        verde('[3] - Para gerar telefones')
+        verde('[4] - Para gerar cidades')
+        verde('[5] - Para gerar estados')
+        verde('[6] - Voltar')
         print('')
         aleatorio = escolha_aleatoria()
         escolha = input('Digite a Opção Desejada: ')
@@ -114,11 +115,11 @@ def menu():
 
 def apresentar_menu():
     separar_por_linha()
-    verde('1 - Ultilizar o Gerador de dados')
-    amarelo('2 - Editar dados existente')
-    vermelho('3 - Excluir um dado')
-    amarelo('4 - Criar dado')
-    vermelho('5 - Sair')
+    verde('[1] - Ultilizar o Gerador de dados')
+    amarelo('[2] - Editar dados existente')
+    vermelho('[3] - Excluir um dado')
+    amarelo('[4] - Criar dado')
+    vermelho('[5] - Sair')
     opcao = input('Digite uma opção: ')
     separar_por_linha()
     return opcao
