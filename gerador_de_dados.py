@@ -43,7 +43,7 @@ def menu():
         print('')
         verde('[1] - Para gerar Nomes')
         verde('[2] - Para gerar emails')
-        verde('[3] - Para gerar telefones')
+        verde('[3] - Para gerar telefones')0
         verde('[4] - Para gerar cidades')
         verde('[5] - Para gerar estados')
         verde('[6] - Voltar')
